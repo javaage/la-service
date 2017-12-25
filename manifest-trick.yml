@@ -1,0 +1,14 @@
+---
+applications:
+  - name: booking-trick
+    instances: 1
+    buildpack: java_buildpack
+    stack: cflinuxfs2
+    memory: 512M
+    path: target/bookingService-0.0.1.jar
+services:
+    - pg-explore
+    - redis-explore
+env:
+      UAA_SERVER_URL: https://c48fce69-74a5-45e5-a02d-9c08258abce1.predix-uaa.run.aws-usw02-pr.ice.predix.io
+      REDIS: redis-17

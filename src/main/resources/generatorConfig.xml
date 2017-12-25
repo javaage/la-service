@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<!-- C:\Users\p9030576\.m2\repository\postgresql\postgresql\9.1-901-1.jdbc4\postgresql-9.1-901-1.jdbc4.jar -->
+  <classPathEntry location="C:\Users\p9030576\.m2\repository\mysql\mysql-connector-java\8.0.8-dmr\mysql-connector-java-8.0.8-dmr.jar" />
+  <context id="context1">
+    <jdbcConnection connectionURL="jdbc:mysql://localhost:3306/la" driverClass="com.mysql.jdbc.Driver" password="phpcj" userId="root" />
+    <javaModelGenerator targetPackage="com.cisco.la.model" targetProject="laService" />
+    <sqlMapGenerator targetPackage="com.cisco.la.mapper" targetProject="laService" />
+    <javaClientGenerator targetPackage="com.cisco.la.mapper" targetProject="laService" type="XMLMAPPER" />
+	<!-- 
+    <table schema="public" tableName="wms_monitor" domainObjectName="MonitorModel">
+    <generatedKey column="wm_id" sqlStatement="SELECT nextval('wms_monitor_wm_id_seq')" identity="true"/>
+      <columnOverride column="wm_id" property="id"  javaType="int"/>
+      <columnOverride column="wm_location" property="location" />
+      <columnOverride column="wm_high" property="high" />
+      <columnOverride column="wm_pressure" property="pressure" />
+      <columnOverride column="wm_time" property="time" />
+    </table>
+     -->
+    <table schema="public" tableName="la_crs_history" domainObjectName="CourseHistoryModel">
+      <columnOverride column="hstr_usr_id" property="userID"  javaType="String"/>
+      <columnOverride column="hstr_crs_id" property="courseID"  javaType="String"/>
+    </table>
+  </context>
+</generatorConfiguration>

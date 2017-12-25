@@ -1,0 +1,13 @@
+---
+applications:
+  - name: booking-service
+    instances: 2
+    buildpack: java_buildpack
+    stack: cflinuxfs2
+    path: target/bookingService-0.0.1.jar
+services:
+    - pg-explore
+    - redis-explore
+env:
+      UAA_SERVER_URL: https://286af391-5bb4-4829-8ca7-c3d5d6345a31.predix-uaa.run.aws-usw02-pr.ice.predix.io
+      REDIS: redis-1
